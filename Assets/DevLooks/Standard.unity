@@ -217,7 +217,7 @@ RectTransform:
   m_Children:
   - {fileID: 752971173}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -357,7 +357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &282250692
 Transform:
   m_ObjectHideFlags: 0
@@ -449,7 +449,6 @@ GameObject:
   - component: {fileID: 379235576}
   - component: {fileID: 379235575}
   - component: {fileID: 379235574}
-  - component: {fileID: 379235577}
   - component: {fileID: 379235578}
   m_Layer: 0
   m_Name: Guns
@@ -457,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &379235572
 Transform:
   m_ObjectHideFlags: 0
@@ -536,25 +535,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379235571}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &379235577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379235571}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91c41610204e95a499864c524d4c61c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BrushTexture: {fileID: 2800000, guid: fdea2f51160869341bb6cb1f0825a342, type: 3}
-  PaintShader: {fileID: 4800000, guid: cf84ee9b288cfe647830764ddd82e5bd, type: 3}
-  PaintColor: 0
-  RayCastDir: {x: 0, y: 0, z: 1}
-  FireRate: 2
-  BrushRadius: 0.021
-  FiringRange: 100
 --- !u!114 &379235578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +542,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379235571}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0797023f3b496fe458471298d0e7a354, type: 3}
   m_Name: 
@@ -570,61 +550,22 @@ MonoBehaviour:
   BrushTexture: {fileID: 2800000, guid: 344e783bd9da0da45ac834dbfdbb1255, type: 3}
   PaintShader: {fileID: 4800000, guid: 144a298fe942e2f4aa43fdb7ecd2d0e5, type: 3}
   PaintColor: 1
+  PaintMaterial: {fileID: 0}
+  PaintRT: {fileID: 0}
+  PaintRenderRT: {fileID: 0}
+  BrushTexProp: 342
+  PaintColorProp: 340
+  PaintColorRTProp: 678
   PaintWidth: 0.525
   FiringRange: 101.5
   PaintSpacing: 0.2
---- !u!1 &421387387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 421387389}
-  - component: {fileID: 421387388}
-  m_Layer: 0
-  m_Name: EnemyController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &421387388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421387387}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 351e24b1fed88874c9d54d7749be4ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mPaintManager: {fileID: 0}
-  EnemyNum: 1
-  RootNode: {fileID: 1329204605}
-  EnemyPrefab: {fileID: 9005555479140392162, guid: 9a2023194aedbe34ba059706d3752c59, type: 3}
-  GroundObject: {fileID: 1236166684}
-  MoveSpeed: 2
-  PaintInterval: 0.3
-  ExplodeParticle: {fileID: 8021093541497251918, guid: 4a52aaeb5ccead642a98fb6c84809435, type: 3}
---- !u!4 &421387389
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421387387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.104593985, y: 1.1196434, z: 7.1837773}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  mPaintSize: {x: 0, y: 0}
+  mRayCastDir: {x: 0, y: 0, z: 0}
+  mNearHitPosProp: 558
+  mFarHitPosProp: 557
+  mPaintSizeProp: 559
+  mIntervalTime: 1
+  mCurrentTime: 0
 --- !u!1 &617949945
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &617949946
 Transform:
   m_ObjectHideFlags: 0
@@ -653,7 +594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617949945}
   m_LocalRotation: {x: -0.2702829, y: -0.27028295, z: 0.653412, w: 0.6534119}
-  m_LocalPosition: {x: -7.76, y: 0.261, z: -5.278}
+  m_LocalPosition: {x: -6.956, y: 0.261, z: -6.9}
   m_LocalScale: {x: 0.5015493, y: 1.5, z: 0.5015493}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -719,7 +660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617949945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be6b2ace7932a3d41bd15c49cb45acde, type: 3}
   m_Name: 
@@ -727,12 +668,25 @@ MonoBehaviour:
   BrushTexture: {fileID: 2800000, guid: 10b232b8a9690ff4ba3209eeb63b0084, type: 3}
   PaintShader: {fileID: 4800000, guid: 144a298fe942e2f4aa43fdb7ecd2d0e5, type: 3}
   PaintColor: 0
+  PaintMaterial: {fileID: 0}
+  PaintRT: {fileID: 0}
+  PaintRenderRT: {fileID: 0}
+  BrushTexProp: 342
+  PaintColorProp: 340
+  PaintColorRTProp: 678
   RollerLeftPos: {fileID: 1554888643}
   RollerRightPos: {fileID: 1377534749}
   FiringRange: 0.454
   PaintWidth: 1.8
   PaintHeight: 0.25
   PaintSpacing: 0.261
+  mPaintSize: {x: 0, y: 0}
+  mPreviousPos: {x: 0, y: 0, z: 0}
+  mPreviousRotation: {x: 0, y: 0, z: 0, w: 1}
+  mRayCastDir: {x: 0, y: -1, z: 0}
+  mLeftHitPosProp: 558
+  mRightHitPosProp: 557
+  mPaintSizeProp: 559
 --- !u!136 &617949953
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -894,8 +848,9 @@ GameObject:
   - component: {fileID: 961739752}
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
-  - component: {fileID: 961739754}
+  - component: {fileID: 961739756}
   - component: {fileID: 961739755}
+  - component: {fileID: 961739757}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1002,23 +957,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &961739754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961739749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618b0e3f6c65dd247a4a016150006c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LookSpeedController: 120
-  m_LookSpeedMouse: 4
-  m_MoveSpeed: 10
-  m_MoveSpeedIncrement: 2.5
-  m_Turbo: 10
 --- !u!114 &961739755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,7 +964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9671caeaa62bbe843b0bf5be263f1157, type: 3}
   m_Name: 
@@ -1038,6 +976,37 @@ MonoBehaviour:
   yMinLimit: -20
   yMaxLimit: 80
   speed: 10
+--- !u!114 &961739756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a165a794cdab0b5488e126bcdb79ded1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 961739752}
+  RayCastInterval: 0.05
+--- !u!114 &961739757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618b0e3f6c65dd247a4a016150006c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LookSpeedController: 120
+  m_LookSpeedMouse: 4
+  m_MoveSpeed: 10
+  m_MoveSpeedIncrement: 2.5
+  m_Turbo: 10
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1187,7 @@ Transform:
   - {fileID: 282250692}
   - {fileID: 379235572}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377534748
 GameObject:
@@ -1317,7 +1286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554888642
 GameObject:
@@ -1359,8 +1328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752936043}
-  - component: {fileID: 1752936042}
-  - component: {fileID: 1752936044}
+  - component: {fileID: 1752936045}
   m_Layer: 0
   m_Name: PaintManager
   m_TagString: Untagged
@@ -1368,21 +1336,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1752936042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752936041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b886f19b38a853142b3dafeef2a95682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirstPaintColor: {r: 0.121568635, g: 0, b: 0.91372555, a: 1}
-  SecondPaintColor: {r: 1, g: 0.8313726, b: 0, a: 1}
-  PaintRTReslution: 1024
 --- !u!4 &1752936043
 Transform:
   m_ObjectHideFlags: 0
@@ -1396,9 +1349,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -2.998, y: -3.156, z: -0.948}
---- !u!114 &1752936044
+--- !u!114 &1752936045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1407,13 +1360,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752936041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a165a794cdab0b5488e126bcdb79ded1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fa8a3386a72d02438bf0a06b6493ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrushTexture: {fileID: 2800000, guid: fdea2f51160869341bb6cb1f0825a342, type: 3}
-  PaintShader: {fileID: 4800000, guid: cf84ee9b288cfe647830764ddd82e5bd, type: 3}
-  PaintColor: 0
-  camera: {fileID: 961739752}
-  BrushRadius: 0.046
-  RayCastInterval: 0.1
-  FiringRange: 100
+  PaintRT: {fileID: 0}
+  PaintRenderRT: {fileID: 0}
+  FirstColor: {r: 0.6415094, g: 0.12406549, b: 0.5545252, a: 1}
+  SecondColor: {r: 0, g: 1, b: 0, a: 1}
+  PaintRTRes: 2048
+  CustomPaintBrush:
+    BrushTexture: {fileID: 2800000, guid: fdea2f51160869341bb6cb1f0825a342, type: 3}
+    PaintShader: {fileID: 4800000, guid: cf84ee9b288cfe647830764ddd82e5bd, type: 3}
+    BrushRadius: 0.029
+    FiringRange: 30
+    PaintFirstColorMaterial: {fileID: 0}
+    PaintSecondColorMaterial: {fileID: 0}
+    FirstColor: {r: 0, g: 0, b: 0, a: 0}
+    SecondColor: {r: 0, g: 0, b: 0, a: 0}

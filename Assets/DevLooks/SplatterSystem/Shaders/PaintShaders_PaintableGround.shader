@@ -1,4 +1,4 @@
-Shader "YSshaders/Ground"
+Shader "PaintShaders/PaintableGround"
 {
     Properties
     {
@@ -148,8 +148,8 @@ Shader "YSshaders/Ground"
             #pragma vertex LitPassVertex
             #pragma fragment LitPassFragment
 
-            #include "YKShaders_GroundInput.hlsl"
-            #include "YKShaders_GroundForwardPass.hlsl"
+            #include "PaintShaders_PaintableGroundInput.hlsl"
+            #include "PaintShaders_PaintableGroundForwardPass.hlsl"
             ENDHLSL
         }
 

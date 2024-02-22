@@ -1,4 +1,4 @@
-Shader "YKSEshaders/Paint"
+Shader "PaintShaders/Paint"
 {
     Properties
     {

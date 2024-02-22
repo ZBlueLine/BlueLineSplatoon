@@ -1,4 +1,4 @@
-Shader "YKSEshaders/PaintLine"
+Shader "PaintShaders/PaintLine"
 {
     Properties
     {

@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static PaintHelper;
 using static UnityEngine.ParticleSystem;
 using Random = UnityEngine.Random;
+using SplatterSystem;
 
 public class EnemyController : MonoBehaviour
 {
-    public PaintManager mPaintManager = null;
+    //public PaintsManager mPaintManager = null;
     public int EnemyNum = 1;
     public Transform RootNode;
     public GameObject EnemyPrefab;
     public GameObject GroundObject;
-    public float MoveSpeed = 2.0f; // 移动速度
+    public float MoveSpeed = 2.0f; // 绉诲姩閫熷害
     public float PaintInterval = 0.3f;
     public ParticleSystem ExplodeParticle;
 
@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
     {
         if (RootNode == null)
         {
-            Debug.LogError("未设置根节点");
+            Debug.LogError("鏈缃牴鑺傜偣");
         }
         for (int i = 0; i < EnemyNum; i++)
         {
@@ -62,10 +62,10 @@ public class EnemyController : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(enemy.Transform.position, Vector3.down, out hit, 5);
         if (hit.collider == null) return;
-        if(mPaintManager == null)
-        {
-            Debug.LogError("没有挂载PaintManager");
-        }
+        //if(mPaintManager == null)
+        //{
+        //    Debug.LogError("娌℃湁鎸傝浇PaintManager");
+        //}
         //mPaintManager.Paint(hit, enemy.Radius, enemy.PaintColor);
         mEmitParams.position = enemy.Transform.position;
         ExplodeParticle.Emit(mEmitParams, 1);
@@ -106,7 +106,7 @@ class Enemy
     public Transform Transform;
     public float DirectionChangeTime;
     public Vector3 MoveDirection;
-    public PaintColor PaintColor;
+    public PaintColorType PaintColor;
     public float Radius;
     public float LifeTime;
     public float CurrentTime = 0;
@@ -118,7 +118,7 @@ class Enemy
         this.DirectionChangeTime = directionChangeTime;
         this.MoveDirection = moveDirection;
         this.LifeTime = Random.Range(1, 10);
-        this.PaintColor = Random.value > 0.5f ? PaintColor.SecondColor : PaintColor.FirstColor;
+        this.PaintColor = Random.value > 0.5f ? PaintColorType.SecondColor : PaintColorType.FirstColor;
         this.Radius = Random.Range(0.1f, 0.2f);
     }
     public Enemy(Transform transform, float directionChangeTime, Vector3 moveDirection, float lifeTime)
@@ -127,7 +127,7 @@ class Enemy
         this.DirectionChangeTime = directionChangeTime;
         this.MoveDirection = moveDirection;
         this.LifeTime = lifeTime;
-        this.PaintColor = Random.value > 0.5f ? PaintColor.SecondColor : PaintColor.FirstColor;
+        this.PaintColor = Random.value > 0.5f ? PaintColorType.SecondColor : PaintColorType.FirstColor;
         this.Radius = Random.Range(0.1f, 0.2f);
     }
 }
